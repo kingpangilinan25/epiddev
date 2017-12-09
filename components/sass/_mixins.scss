@@ -32,3 +32,38 @@
     clear: both;
   }
 }
+
+@mixin list-reset() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin em() {
+  color: $gold2;
+  font-size: $em-size;
+  font-style: normal;
+}
+
+// Example usage of rem-px mixin
+//
+// @include rem-px(font-size, 1.8);
+// font-size: 18px;
+// font-size: 1.8rem;
+//
+// @include rem-px(padding, 1, 0, 5, 0);
+// padding: 10px 0 50px 0;
+// padding: 1rem 0 5rem 0;
+
+@mixin rem-px($property, $remValues...) {
+  $pxs: ();
+  $rems: ();
+
+  @each $value in $remValues {
+    $pxs: append($pxs, $value*10+px, space);
+    $rems: append($rems, $value+rem, space);
+  }
+
+  #{$property}: $pxs;
+  #{$property}: $rems;
+}

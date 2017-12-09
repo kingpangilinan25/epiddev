@@ -2,10 +2,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
       
   sass: {
+    options: {
+      //style: 'expanded' //expanded
+      outputStyle: 'expanded',
+      sourceMap: true
+    },
     dist: {
-      options: {
-        style: 'expanded' //expanded
-      },
       files: [{
         src: 'components/sass/style.scss',
         dest: 'epidemicmarketing/css/style-layout2.css'
@@ -13,17 +15,17 @@ module.exports = function(grunt) {
     }
   }, //sass
     
-browserSync: {
-    dev: {
-        bsFiles: {
-            src : 'epidemicmarketing/css/*.css'
-        },
-        options: {
-            watchTask: true,
-            proxy: "localhost/epidemic"
-        }
-    }
-},
+  browserSync: {
+      dev: {
+          bsFiles: {
+              src : 'epidemicmarketing/css/*.css'
+          },
+          options: {
+              watchTask: true,
+              proxy: "localhost/epidemic"
+          }
+      }
+  },
     
   watch: {
     options: {

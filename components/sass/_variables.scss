@@ -1,6 +1,6 @@
 // _variables.scss
 // =================
-@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
+//@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
  
 $beige         : #E3C691;
 $darkGreenGold : #8D8862;
@@ -12,6 +12,10 @@ $purple        : #3E2B3D;
 $darkPurple    : #3A3248;
 $pink          : #CC8E94;
 $skin          : #B08B8B;
+$header_text_color : #fff;
  
-$headFont : 'Patua One', sans-serif;
-$bodyFont : 'Inika', serif;
+//$headFont : 'Patua One', sans-serif;
+$headFont: 'Oswald', sans-serif;
+$headFontRal: 'Raleway', sans-serif;
+$bodyFont : 'Open Sans', sans-serif;
+

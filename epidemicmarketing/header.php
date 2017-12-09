@@ -81,16 +81,21 @@ src="https://www.facebook.com/tr?id=881477048681375&ev=PageView
 	<div id="page-wrap">
 		<header id="header" role="banner">
         	<div class="container">
-                <div class="contact-wrap pull-right">
-                    <a href="tel:3035866728" class="call-us"><span class="glyphicon glyphicon-earphone"></span> Call Us<span class="hidden-xs"> At 303.586.6728</span></a>
-                    <a href="mailto:info@epidemic-marketing.com" class="email-us"><span class="glyphicon glyphicon-envelope"></span> Email Us</a>
+                <div class="contact-wrap">
+                    <a href="mailto:info@epidemic-marketing.com" class="email-us">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <span class="hidden-xs">Email Us</span>
+                    </a>
+                    <a href="tel:3035866728" class="call-us">
+                    	<i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="hidden-xs">303-586-6728</span>
+                    </a>
                 </div>
-                <div class="clearfix"></div>
                 
                 <nav id="nav" class="navbar navbar-default" role="navigation">
                   <div class="navbar-header">
                     <a id="logo_link" class="navbar-brand" href="<?php echo get_option('home'); ?>/">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/epidemic-logo.png" title="<?php bloginfo('description'); ?>" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" width="291" height="65" />
+                        <img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png" title="<?php bloginfo('description'); ?>" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" width="291" height="65" />
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                       <span class="sr-only">Toggle navigation</span>

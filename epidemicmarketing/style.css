@@ -175,11 +175,6 @@ img {
 	vertical-align: middle;
 	width: auto;
 }
-@media (min-width: 768px) {
-    #header #logo_link img {
-        margin-top: -25px;
-    }
-}
 #header.fixed .contact-wrap  {
 	display:none;
 }
@@ -266,7 +261,7 @@ body {
 #nav ul {
 }
 #nav .navbar-collapse {
-	padding-top: 16px;
+	padding-top: 5px;
 }
 #nav ul li {
 	margin-left: 15px;
@@ -1486,37 +1481,8 @@ body .main_cc ul li {
 	.contact-wrap a.email-us {
 		margin-left: 15px;
 	}
-	.contact-wrap {
-		background: #fafafa;
-		float: none !important;
-		margin: -25px -15px 25px;
-		padding-bottom: 3px;
-        
-		margin: -25px -15px 30px;
-		padding: 10px;
-		background: #363839;        
-        text-align: center;
-	}
     #header {
         padding-bottom: 15px;
-    }
-    
-
-    .contact-wrap a.call-us,
-    .contact-wrap a.email-us {
-        padding: 6px 15px;
-        border-radius:  5px;
-        color: #fff;
-        text-shadow: 1px 1px 1px #111;
-        font-size: 14px;
-        
-        background: #6db3f2;
-        background: -moz-linear-gradient(top,  #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);
-        background: -webkit-linear-gradient(top,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
-        background: linear-gradient(to bottom,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 );
-
-        
     }
     
     .hero-form-container p.fh-v2 {

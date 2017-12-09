@@ -232,7 +232,7 @@ It has been a pleasure working under Noah and I expect our professional relation
 
 <section class="sec-wrap sec-wrap-green form-footer-sec">
 	<div class="container">
-    	<h2 class="text-center section-header">Lets Talk about Your Business</h2>
+    	<h2 class="text-center section-header">Lets Talk about Your Business <i class="fa fa-address-card-o" aria-hidden="true"></i></h2>
       <div style="margin-left: auto;margin-right: auto;max-width:820px;">
       <div class="row"><?php echo do_shortcode('[contact-form-7 id="878" title="BusinessForm"]');?></div>
       </div>

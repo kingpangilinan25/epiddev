@@ -2,7 +2,7 @@
     
     <div itemscope itemtype="http://schema.org/LocalBusiness/websiteDesign">
     <span itemprop="name">Epidemic Marketing</span>
-    <img itemprop="image" src="/wp-content/themes/epidemicmarketing/images/epidemic-logo.png" title="888heating" alt="888heating" />
+    <img itemprop="image" src="<?php echo get_template_directory_uri(); ?>/images/epidemic-logo.png" title="Epidemic Marketing" alt="Epidemic Marketing" />
     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
     <span itemprop="streetAddress">191 University Blvd #602</span>
     <span itemprop="addressLocality">Denver</span>,
@@ -18,7 +18,7 @@
         <meta itemprop="serviceType" content="Website Design " />
         <span itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name">Epidemic Marketing</span>
-            <img itemprop="image" src="/wp-content/themes/epidemicmarketing/images/epidemic-logo.png" title="888heating" alt="888heating" />
+            <img itemprop="image" src="<?php echo get_template_directory_uri(); ?>/images/epidemic-logo.png" title="epidemic Marketing" alt="epidemic Marketing" />
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span itemprop="streetAddress">191 University Blvd #602</span>
             <span itemprop="addressLocality">Denver</span>,

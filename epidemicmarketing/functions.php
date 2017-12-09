@@ -60,6 +60,9 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
 			wp_register_style( 'flexslider-style', get_template_directory_uri() . '/css/flexslider.css' );
 			wp_enqueue_style( 'flexslider-style' );
 			
+			wp_register_style( 'facss', get_template_directory_uri() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
+			wp_enqueue_style( 'facss' ); 
+			
 			//wp_register_style( 'bootstrapthemecss', get_template_directory_uri() . '/css/bootstrap-theme.min.css' );
 			//wp_enqueue_style( 'bootstrapthemecss' ); 
             
@@ -67,12 +70,10 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
 			//wp_enqueue_style( 'animatecss' ); 
             
             
-            
-			wp_register_style( 'custom_style', get_bloginfo('stylesheet_url') );
-			wp_enqueue_style( 'custom_style' );
-      
-			wp_register_style( 'custom_style_layout2', get_template_directory_uri() . '/css/style-layout2.css' );
-			wp_enqueue_style( 'custom_style_layout2' );
+            //if(!is_front_page()):
+				wp_register_style( 'custom_style', get_bloginfo('stylesheet_url'), array(), null );
+				wp_enqueue_style( 'custom_style' );
+			//endif;
       
 			if(is_page_template( 'template_lader1.php' ) || is_page_template( 'template_seopage.php' ) || is_page_template( 'template_wl_seo.php' ) ):
 				wp_register_style( 'lander1', get_template_directory_uri() . '/css/lander1.css' );
@@ -93,12 +94,17 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
 				wp_register_style( 'cpricing', get_template_directory_uri() . '/css/pricing.css' );
 				wp_enqueue_style( 'cpricing' ); 
 			endif;
+			
+			
+      
+			wp_register_style( 'custom_style_layout2', get_template_directory_uri() . '/css/style-layout2.css', array('nimblebox-style','bootstrapcss','megamenu') );
+			wp_enqueue_style( 'custom_style_layout2' );
 		}
 		add_action( 'wp_enqueue_scripts', 'wpgnik_register_css', 5 );	 
         
         
 		function wpgnik_register_scripts_ftr() {
-			wp_register_style( 'googlewebfont-k', "//fonts.googleapis.com/css?family=Open+Sans:300,400,700" );
+			wp_register_style( 'googlewebfont-k', "//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:400,600|Raleway:400,600,800" );
 			wp_enqueue_style( 'googlewebfont-k' );
 		}
 		add_action( 'wp_footer', 'wpgnik_register_scripts_ftr', 10 );
