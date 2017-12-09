@@ -13,18 +13,31 @@ module.exports = function(grunt) {
     }
   }, //sass
     
+browserSync: {
+    dev: {
+        bsFiles: {
+            src : 'epidemicmarketing/css/*.css'
+        },
+        options: {
+            watchTask: true,
+            proxy: "localhost/epidemic"
+        }
+    }
+},
+    
   watch: {
     options: {
       spawn: false,
-      //livereload: true
+      livereload: true
     },
     scripts: {
       files: [
-        '**/*.js',
-        '**/*.scss'
+        'components/scripts/**/*.js',
+        'components/sass/**/*.scss',
+        'builds/development/**/*.html',
       ],
       tasks: ['sass']
-    }
+    }      
   }
       
   }); //initConfig
@@ -33,8 +46,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   //grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
   
-  grunt.registerTask('default', ['sass', 'watch']);
+  grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
 
 
 }; //wrapper function

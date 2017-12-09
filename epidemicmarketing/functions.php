@@ -43,6 +43,7 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
 			wp_deregister_script('flexslider');
 			wp_register_script('flexslider', ( get_stylesheet_directory_uri(). "/js/jquery/jquery.flexslider.js" ),'', '', true);
 			wp_enqueue_script('flexslider'); 
+
             
 			//wp_deregister_script('wow');
 			//wp_register_script('wow', ( get_stylesheet_directory_uri(). "/js/wow.min.js" ),'', '', true);
@@ -69,6 +70,10 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
             
 			wp_register_style( 'custom_style', get_bloginfo('stylesheet_url') );
 			wp_enqueue_style( 'custom_style' );
+      
+			wp_register_style( 'custom_style_layout2', get_template_directory_uri() . '/css/style-layout2.css' );
+			wp_enqueue_style( 'custom_style_layout2' );
+      
 			if(is_page_template( 'template_lader1.php' ) || is_page_template( 'template_seopage.php' ) || is_page_template( 'template_wl_seo.php' ) ):
 				wp_register_style( 'lander1', get_template_directory_uri() . '/css/lander1.css' );
 				wp_enqueue_style( 'lander1' ); 
