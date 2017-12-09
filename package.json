@@ -1,0 +1,11 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "Project for Epidemic website",
+  "author": "King Pangnilinan",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sass": "^2.0.0"
+  }
+}
