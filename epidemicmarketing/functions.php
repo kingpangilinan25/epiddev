@@ -127,6 +127,7 @@ add_action('wp_footer', 'wp_print_head_scripts', 5);
     }
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
+	
 	if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'title-tag' );
 		//add_theme_support( 'post-thumbnails' );
@@ -167,16 +168,26 @@ add_action('wp_footer', 'wp_print_head_scripts', 5);
     	));
     }
 	//reg nav
-  	//if (function_exists('register_nav_menus')) {
-	//	register_nav_menus(array('main_nav' => 'Main Navigation' ));	
-	//}
 	// Register custom navigation walker
     require_once('wp_bootstrap_navwalker.php');
+	
 	add_action( 'after_setup_theme', 'wpgnik_setup' );
 	if ( ! function_exists( 'wpgnik_setup' ) ):
 		function wpgnik_setup() { 
 		register_nav_menu( 'main_nav', __( 'Main Navigation', 'wpgnik' ) );
+		register_nav_menu( 'footer_nav', __( 'Footer Navigation', 'wpgnik' ) );
 	} endif;
+	
+	function footer_nav() {
+		wp_nav_menu( 
+			array( 
+				'container' => false,
+				'theme_location' 	=> 'footer_nav',
+				'menu_class' => 'nav navbar-nav navbar-col3',
+			) 
+		);
+	}
+	
 	// Display Spam & Delete links when logged in
 	function spam_delete_links($id) {
 		global $id;

@@ -27,7 +27,7 @@
         	<div class="container">
                 <div class="row">
                     <div class="credit col-sm-4 col-sm-push-4">
-                    	<h1>Navigation Here</h1>
+                    	<?php footer_nav(); ?>
                     </div>
                     <div class="credit col-sm-4 col-sm-pull-4"> 
                             <img src="<?php echo get_template_directory_uri(); ?>/images/epidemic-logo.png" title="epidemic marketing website design and seo" alt="Epidemic Marketing - Search Engine Optimization"/>

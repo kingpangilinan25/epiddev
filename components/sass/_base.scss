@@ -170,6 +170,10 @@ Footer
     }
   }
 }
+.navbar-col3 {
+  font-family: $headFont;
+  @include rem-px(font-size, 1.4);
+}
 
 /******************************************
 Footer End
