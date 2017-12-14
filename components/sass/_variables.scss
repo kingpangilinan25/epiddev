@@ -12,10 +12,41 @@ $purple        : #3E2B3D;
 $darkPurple    : #3A3248;
 $pink          : #CC8E94;
 $skin          : #B08B8B;
+
 $header_text_color : #fff;
+$footer_text_color : #212121;
+$light_blue: #00aac0;
+$site_blue: #0054a5;
+$white: #ffffff;
+$light_gray: #f1f5f6;
  
 //$headFont : 'Patua One', sans-serif;
 $headFont: 'Oswald', sans-serif;
 $headFontRal: 'Raleway', sans-serif;
 $bodyFont : 'Open Sans', sans-serif;
 
+// Example usage of Breakpoints
+//
+/* Inclusive and exclusive operators for a finer control over the intervals */
+
+//@include media(">phone", "<=tablet") {
+//    width: 50%;
+//}
+
+// Breakpoints
+@import "include-media";
+$breakpoints: (
+  phone: 320px, 
+  desktop: 1024px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  mobs: 320px,
+  mobm: 375px,
+  mobl: 425px,
+  tab: 768px, 
+  laptop: 1024px,
+  laptopl: 1440px,
+  s4k: 2560px  
+);

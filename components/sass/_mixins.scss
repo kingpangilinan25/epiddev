@@ -67,3 +67,53 @@
   #{$property}: $pxs;
   #{$property}: $rems;
 }
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin headerbgtext {  
+    @include rem-px(font-size, 2.3);
+    font-family: $headFont;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+
+// Ghost button from http://www.developerdrive.com/2014/11/15-essential-sass-mixins/
+
+// usage div {
+// @include ghost-button(#ffffff, #000, 5px, #34dec6, 4px, 300ms, #000000 );
+// }
+@mixin ghost-button($font-color: blue, $background: none, $border-size: 0, $border-color:transparent, $transition-speed: 300ms, $hover-color: black) {
+   display:inline-block;
+   text-decoration:none;
+   text-transform:uppercase;
+   color:$font-color;
+    background: $background;
+   border:$border-size solid $border-color;
+   -webkit-transition: color $transition-speed, background $transition-speed;
+   transition: color $transition-speed, background $transition-speed;
+   &:hover
+   {
+   background:$border-color;
+   color:$hover-color;
+   }
+ }
+
+@mixin flexcenter {  
+      display: flex;
+      align-items: center;
+}

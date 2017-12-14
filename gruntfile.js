@@ -1,46 +1,52 @@
 module.exports = function(grunt) {
+  
+  var path = require("path");
+  
   grunt.initConfig({
       
-  sass: {
-    options: {
-      //style: 'expanded' //expanded
-      outputStyle: 'expanded',
-      sourceMap: true
-    },
-    dist: {
-      files: [{
-        src: 'components/sass/style.scss',
-        dest: 'epidemicmarketing/css/style-layout2.css'
-      }]
-    }
-  }, //sass
-    
-  browserSync: {
-      dev: {
-          bsFiles: {
-              src : 'epidemicmarketing/css/*.css'
-          },
-          options: {
-              watchTask: true,
-              proxy: "localhost/epidemic"
-          }
+    sass: {
+      options: {
+        //style: 'expanded' //expanded
+        outputStyle: 'expanded',
+        sourceMap: true,
+         includePaths: [
+           path.join(__dirname, 'node_modules', 'include-media', 'dist')
+         ]
+      },
+      dist: {
+        files: [{
+          src: 'components/sass/style.scss',
+          dest: 'epidemicmarketing/css/style-layout2.css'
+        }]
       }
-  },
-    
-  watch: {
-    options: {
-      spawn: false,
-      livereload: true
+    }, //sass
+
+    browserSync: {
+        dev: {
+            bsFiles: {
+                src : 'epidemicmarketing/css/*.css'
+            },
+            options: {
+                watchTask: true,
+                proxy: "localhost/epidemic"
+            }
+        }
     },
-    scripts: {
-      files: [
-        'components/scripts/**/*.js',
-        'components/sass/**/*.scss',
-        'builds/development/**/*.html',
-      ],
-      tasks: ['sass']
-    }      
-  }
+
+    watch: {
+      options: {
+        spawn: false,
+        livereload: true
+      },
+      scripts: {
+        files: [
+          'components/scripts/**/*.js',
+          'components/sass/**/*.scss',
+          'builds/development/**/*.html',
+        ],
+        tasks: ['sass']
+      }      
+    }
       
   }); //initConfig
 

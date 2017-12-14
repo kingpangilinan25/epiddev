@@ -1,20 +1,39 @@
+/* Inclusive and exclusive operators for a finer control over the intervals */
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (min-width: 425px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.1em;
+  font-size: 15px;
+  font-size: 1.5rem;
   padding: 0;
   margin: 0;
 }
 
 #content {
   color: #CC8E94;
-  font-size: 2em;
+  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1800px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
 }
 
 headings() {
@@ -23,26 +42,29 @@ headings() {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 35px;
+  font-size: 3.5rem;
   margin-bottom: 10px;
   color: #507356;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 575px) {
   h1 {
-    font-size: 2.2em;
+    font-size: 25px;
+    font-size: 2.5rem;
   }
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 15px;
+  font-size: 1.5rem;
   color: #3E2B3D;
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.5em;
-  color: #3E2B3D;
   margin-bottom: 20px;
   margin-top: 15px;
 }
@@ -113,8 +135,10 @@ Header Nav
   margin: -1rem 0rem 1rem 0rem;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .contact-wrap {
+    z-index: 99;
+    position: relative;
     float: right;
     margin: 0px 0px 0px 0px;
     margin: 0rem 0rem 0rem 0rem;
@@ -132,7 +156,7 @@ Header Nav
   margin-left: 4.5rem;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   #nav .navbar-collapse {
     float: right;
     clear: right;
@@ -193,14 +217,544 @@ Footer
   padding-bottom: 3rem;
 }
 
+#footer .cwidget-f {
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+}
+
 .navbar-col3 {
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
+  font-size: 14px;
+}
+
+.navbar-col3 li {
+  float: left;
+  width: 50%;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .navbar-col3 li {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-col3 li {
+    width: 33%;
+    letter-spacing: 1px;
+  }
+}
+
+.navbar-col3 a {
+  color: #212121;
+  padding: 10px;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  padding: 10px 10px 10px 0;
+}
+
+.cwf2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #212121;
+  font-size: 14px;
+}
+
+.cwf2 img {
+  display: block;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.cwf2 .hl-lb {
+  color: #00aac0;
+}
+
+.cwf3 p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cwf3 .title-pf {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cwf3 .phone-f-cont a {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.cwf3 .addr-cont-f a {
+  font-weight: 600;
+  color: #000;
+  font-size: 15px;
 }
 
 /******************************************
 Footer End
+******************************************/
+/******************************************
+Home L2
+******************************************/
+/******************************************
+SEO section
+******************************************/
+@media screen and (min-width: 768px) {
+  .sec-seo .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sec-seo .context1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sec-seo .context2 {
+  color: #212121;
+}
+
+.sec-seo .context2 ul li {
+  list-style: none;
+  background: url(../images/home-l2/list-checked.png) no-repeat scroll left center;
+  padding-left: 30px;
+  padding-left: 3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .sec-seo .context2 ul li {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.sec-seo .context2 p.lead {
+  font-weight: bold;
+}
+
+.sec-seo .context2 h2 {
+  color: #0054a5;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.sec-seo .context2 h2 .title-text {
+  z-index: 2;
+  position: relative;
+  display: block;
+  text-shadow: -2px 0 0px 1px #fff;
+  padding: 0px 3px;
+  padding: 0rem 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sec-seo .context2 h2 .title-text {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+
+.sec-seo .context2 h2 .title-back {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: -14%;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(33, 33, 33, 0.05);
+  font-size: 60px;
+  font-size: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sec-seo .context2 h2 .title-back {
+    font-size: 80px;
+    font-size: 8rem;
+  }
+}
+
+.cont-featured-seo {
+  background: #0098ac;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+  padding-top: 3rem;
+  float: left;
+  width: 46%;
+  margin: 2%;
+  line-height: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+}
+
+.cont-featured-seo figcaption,
+.cont-featured-seo img {
+  width: 50%;
+  display: block;
+  margin: 0px 0px 10px;
+  margin: 0rem 0rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cont-featured-seo figcaption {
+  width: 90%;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cont-featured-seo figcaption {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+}
+
+.cont-featured-seo p {
+  margin: 0;
+  background: #0054a5;
+}
+
+.cont-featured-seo p a {
+  color: #fff;
+  display: block;
+  padding: 5px 10px;
+  padding: 0.5rem 1rem;
+}
+
+/******************************************
+SEO section
+******************************************/
+/******************************************
+WEbdesign great website
+******************************************/
+.sec-great-website {
+  background: #f1f5f6;
+  padding: 10px 0px 10px 0px;
+  padding: 1rem 0rem 1rem 0rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .sec-great-website {
+    padding: 40px 0px;
+    padding: 4rem 0rem;
+  }
+}
+
+.sec-great-website .row {
+  display: flex;
+  align-items: center;
+}
+
+.sec-great-website img {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-great-website img {
+    max-width: 70%;
+  }
+}
+
+.sec-great-website .context2 p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.sec-great-website .context2 h2 {
+  color: #0054a5;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.sec-great-website .context2 h2 .title-text {
+  z-index: 2;
+  position: relative;
+  display: block;
+  text-shadow: -2px 0 0px 1px #fff;
+  padding: 0px 3px;
+  padding: 0rem 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sec-great-website .context2 h2 .title-text {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+
+.sec-great-website .context2 h2 .title-back {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: -14%;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(33, 33, 33, 0.05);
+  font-size: 60px;
+  font-size: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sec-great-website .context2 h2 .title-back {
+    font-size: 80px;
+    font-size: 8rem;
+  }
+}
+
+/******************************************
+End WEbdesign great website
+******************************************/
+/******************************************
+Conversion Rate Optimization
+******************************************/
+.sec-conversion-rate {
+  background: #0054a5;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .sec-conversion-rate {
+    padding: 30px 0;
+    border-top: 6px solid #00aac0;
+    border-bottom: 6px solid #00aac0;
+  }
+  .sec-conversion-rate .context2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sec-conversion-rate .context1 {
+    float: left;
+    width: 55%;
+  }
+  .sec-conversion-rate .context2 {
+    float: right;
+    width: 45%;
+  }
+  .sec-conversion-rate .container {
+    display: flex;
+    align-items: center;
+  }
+  .sec-conversion-rate::before {
+    content: " ";
+    display: block;
+    position: relative;
+    height: 221px;
+    height: 22.1rem;
+    height: calc(221px - 5vw);
+    width: 100%;
+    background: url(../images/home-l2/sec-bg-top.png) no-repeat scroll center bottom;
+    background-size: 100% 100%;
+  }
+  .sec-conversion-rate::after {
+    content: " ";
+    display: block;
+    position: relative;
+    height: 181px;
+    height: 18.1rem;
+    height: calc(221px - 5vw);
+    width: 100%;
+    background: url(../images/home-l2/sec-bg-bot.png) no-repeat scroll center bottom;
+    background-size: 100% 100%;
+  }
+}
+
+.sec-conversion-rate h2 {
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.sec-conversion-rate h2 .title-text {
+  z-index: 2;
+  position: relative;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .sec-conversion-rate h2 .title-text {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+
+.sec-conversion-rate h2 .title-back {
+  z-index: 1;
+  position: absolute;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.08);
+  font-size: 40px;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .sec-conversion-rate h2 .title-back {
+    top: auto;
+    bottom: 60%;
+    left: 0;
+    transform: translate(0, 0);
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+}
+
+/******************************************
+End Conversion Rate Optimization
+******************************************/
+/******************************************
+CTA Bottom
+******************************************/
+.cta-ldt-cont {
+  padding: 30px 0px 0px;
+  padding: 3rem 0rem 0rem;
+}
+
+.cta-ldt-cont h2 {
+  margin: 0px 0px 10px;
+  margin: 0rem 0rem 1rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cta-ldt-cont h2 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cta-ldt-cont h2 {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+
+.cbtn-green-l2 {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: #98c230;
+  border: 0 solid 300ms;
+  -webkit-transition: color #000000, background #000000;
+  transition: color #000000, background #000000;
+  font-weight: 600;
+  padding: 5px 30px;
+  padding: 0.5rem 3rem;
+  display: block;
+  text-align: center;
+}
+
+.cbtn-green-l2:hover {
+  background: 300ms;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .cbtn-green-l2 {
+    display: inline-block;
+    line-height: 1;
+    padding: 10px 16px;
+    padding: 1rem 1.6rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cbtn-green-l2 {
+    font-size: 19px;
+    font-size: 1.9rem;
+    padding: 10px 26px;
+    padding: 1rem 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cbtn-green-l2 {
+    font-size: 20px;
+    font-size: 2rem;
+    padding: 10px 35px;
+    padding: 1rem 3.5rem;
+  }
+}
+
+/******************************************
+CTA Bottom End
+******************************************/
+/******************************************
+Home L2 End
 ******************************************/
 
 /*# sourceMappingURL=style-layout2.css.map */

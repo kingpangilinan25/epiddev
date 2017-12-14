@@ -4,7 +4,7 @@
 function dequeue_devicepx() {
 wp_dequeue_script( 'devicepx' );
 }
-define( 'ACF_LITE', true );
+//define( 'ACF_LITE', true );
 add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
 	// Add RSS links to <head> section
 	automatic_feed_links();
@@ -104,7 +104,7 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
         
         
 		function wpgnik_register_scripts_ftr() {
-			wp_register_style( 'googlewebfont-k', "//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:400,600|Raleway:400,600,800" );
+			wp_register_style( 'googlewebfont-k', "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:400,600|Raleway:400,600,800" );
 			wp_enqueue_style( 'googlewebfont-k' );
 		}
 		add_action( 'wp_footer', 'wpgnik_register_scripts_ftr', 10 );
@@ -283,5 +283,9 @@ function amp_modify_json_metadata( $metadata, $post ) {
     }
 }
 
+    require_once('custom_builds/custom-featured-widget/custom-featured-widget.php');
+    require_once('custom_builds/custom-featured-widget/cta-widget.php');
+    require_once('custom_builds/custom-featured-widget/foo-widget.php');
+	
 
 ?>
