@@ -3,19 +3,162 @@ Template Name: Home L2
 */ ?>
 <?php get_header(); ?>
 
+<div class="hero-area-l2" role="banner">
+  <div class="container">
+    <?php /*
+    <div class="input-group margin-bottom-sm">
+      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+      <input class="form-control" type="text" placeholder="Email address">
+    </div>
+    */ ?>
 
+    <div class="form-blue-cont">
+      <span class="title-fb-form">I’d like to find out if you can double or triple my revenue!</span>
+      <div class="form-scode-wrap">
+        <?php echo do_shortcode('[contact-form-7 id="1624" title="Hero Form 3"]'); ?>
+      </div>
+
+    </div>
+
+    <div class="context">
+      <span class="title-hero-l2">Are you ready to fast track your business?</span>
+      <p>Doubling and tripling revenue for businesses is what we do. 
+  Find out if we can do the same for you with a FREE 30 minute strategy (not sales) session.</p>
+      <a href="#" class="cbtn-m-hero-l2">More</a>
+    </div>
+  </div>
+</div>
+
+<div class="home-lead-cont">
+  <div class="container">
+    <div class="row featured-serv-cont">
+      <div class="col-xs-6 col-md-3">
+        <div class="featured-item fi1">
+          <i class="cicon" aria-hidden="true"></i>
+          <span class="context">Where do I start if I need a new website?</span>
+          <a href="#" class="cbtn-lm">Learn More</a>
+        </div>
+      </div> <?php // col ?>
+      <div class="col-xs-6 col-md-3">
+        <div class="featured-item fi2">
+          <i class="cicon" aria-hidden="true"></i>
+          <span class="context">I know I need SEO. 
+What now?</span>
+          <a href="#" class="cbtn-lm">Learn More</a>
+        </div>
+      </div> <?php // col ?>
+      <br class="clear clearfix visible-xs" />
+      <div class="col-xs-6 col-md-3">
+        <div class="featured-item fi3">
+          <i class="cicon" aria-hidden="true"></i>
+          <span class="context">How will all of this 
+increase my business?</span>
+          <a href="#" class="cbtn-lm">Learn More</a>
+        </div>
+      </div> <?php // col ?>
+      <div class="col-xs-6 col-md-3">
+        <div class="featured-item fi4">
+          <i class="cicon" aria-hidden="true"></i>
+          <span class="context">How is Epidemic different?</span>
+          <a href="#" class="cbtn-lm">Learn More</a>
+        </div>
+      </div> <?php // col ?>
+    </div> <?php // row ?>
+    <hr />
+    
+    <h1>
+    <span>Epidemic Marketing</span> is a premier Denver Colorado 
+    Search Engine Optimization Company that takes the time 
+    to understand your business</h1>
+    
+  </div>
+</div>
+
+<div class="reviews-cont">
+  <div class="container">
+    <h2 data-titleback="Reviews">
+      <span class="title-text">Words of Encouragement</span>
+      <span class="title-back">Reviews</span>
+    </h2>
+    <p class="text-center"><strong>Nothing is more precious to us than an encouraging word from one of our clients.</strong></p>
+    <div class="row">
+      
+      <div class="col-md-4 context1">
+        <div class="review-wrap-item">
+          <cite>Tony Treash</cite>
+          <span class="start-cont">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </span>
+          <blockquote>
+          <p>Epidemic has been great to work with , they has helped my computer status with American Paintball Coliseum enormously, we now have partnered up on a couple of projects and am excited to see what we can create the next few years.</p>
+          </blockquote>
+          <figure>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/logo-americanpaintball.png" title="APC" alt="APC"/>
+            <figcaption>Owner – American Paintball Coliseum</figcaption>
+            <i class="crev-sep"></i>
+          </figure>
+        </div>
+      </div> <?php // col ?>
+      <div class="col-md-4 context2">
+        <div class="review-wrap-item">
+          <cite>Stacey Wilson</cite>
+          <span class="start-cont">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </span>
+          <blockquote>
+          <p>Noah is great to work with. He continually strives to broaden his knowledge base through research and classes. Noah is always willing to discuss trends and strategies. I would recommend his company for on site and off site SEO services.</p>
+          </blockquote>
+          <figure>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/logo-reflection.png" title="APC" alt="APC"/>
+            <figcaption>President – Reflection Signs and Graphics</figcaption>
+            <i class="crev-sep"></i>
+          </figure>
+        </div>
+      </div> <?php // col ?>
+      <div class="col-md-4 context3">
+        <div class="review-wrap-item">
+          <cite>Chad E. Warriner</cite>
+          <span class="start-cont">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </span>
+          <blockquote>
+          <p>Noah stands alone in his knowledge, expertise and customer service. He has innovative ways to solve any problem in a timely fashion at an affordable price. I highly recommend him and Epidemic Marketing.</p>
+          </blockquote>
+          <figure>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/logo-iheadermedia.png" title="APC" alt="APC"/>
+            <figcaption>Traffic Anchor/Sr. Producer</figcaption>
+            <i class="crev-sep"></i>
+          </figure>
+        </div>
+      </div> <?php // col ?>
+      
+    </div> <?php //  row ?>
+  </div> <?php // container ?>
+</div> <?php // reviews-cont ?>
 
 <div class="sec-seo">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6 col-md-5 context1">
+      <div class="col-sm-6 col-md-5 context1 center">
         
-        <div class="cont-featured-seo">
+        <div class="cont-featured-seo" style="bottom: 2rem;">
           <figure>
             <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/icon-seo.png" title="Learm More About SEO" alt="SEARCH ENGINE OPTIMIZATION" />
             <figcaption>SEARCH ENGINE OPTIMIZATION</figcaption>
           </figure>
-          <p><a href="#">Lear More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
+          <p><a href="#">Learn More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
         </div> <?php // cont-featured-seo ?>        
         
         <div class="cont-featured-seo">
@@ -23,15 +166,15 @@ Template Name: Home L2
             <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/icon-wesbsite-design.png" title="Learm More About Website design" alt="Website design" />
             <figcaption>Website design</figcaption>
           </figure>
-          <p><a href="#">Lear More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
+          <p><a href="#">Learn More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
         </div> <?php // cont-featured-seo ?>        
         
-        <div class="cont-featured-seo">
+        <div class="cont-featured-seo" style="bottom: 1.5rem;">
           <figure>
             <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/icon-fb-ads.png" title="Learm More About Facebook Ads" alt="Facebook Ads" />
             <figcaption>Facebook Ads</figcaption>
           </figure>
-          <p><a href="#">Lear More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
+          <p><a href="#">Learn More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
         </div> <?php // cont-featured-seo ?>        
         
         <div class="cont-featured-seo">
@@ -39,7 +182,7 @@ Template Name: Home L2
             <img src="<?php echo get_template_directory_uri(); ?>/images/home-l2/icon-conversion-rate-optim.png" title="Learm More About Conversion Rate Optimization" alt="Conversion Rate Optimization" />
             <figcaption>Conversion Rate Optimization</figcaption>
           </figure>
-          <p><a href="#">Lear More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
+          <p><a href="#">Learn More <i class="fa fa-plus-circle" aria-hidden="true"></i></a></p>
         </div> <?php // cont-featured-seo ?>
         <br class="clearfix clear" />
         

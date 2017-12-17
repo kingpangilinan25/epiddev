@@ -27,6 +27,38 @@ jQuery(document).ready(function(e) {
         $(this).parent().toggleClass("show-widget");
     });
     */
+  
+
+    var semeSizerElems = [ 
+      '.featured-item', 
+      '.review-wrap-item figure figcaption', 
+      '.review-wrap-item blockquote', 
+      '.review-wrap-item figure',
+      '.cont-featured-seo figure',
+      '.cont-featured-seo figcaption'
+    ]; 
+	if($(semeSizerElems).length >= 1) {
+		//$('.rpc-item figure, .rpc-item h4');
+		var sseImg = '.rpc-item figure'; //fixed bj lazy elems with img inside
+		$(window).on("load resize",function(){
+			$(semeSizerElems).each(function(i, l) {
+				//console.log( "Index #" + i + ": " + l );
+				$(l).samesizr({
+					mobile:370
+				});
+			});
+		});
+		//fixed bj lazy
+		$(sseImg).find("img").on( 'load', function( event ) {
+			$(sseImg).samesizr({
+				mobile:370
+			});
+		});
+		//ver-mid after eq-height
+		$(semeSizerElems).each(function(i, l) {
+			$(l).wrapInner('<div class="dtable-cell" />').wrapInner('<div class="dtable" />');
+		});
+	}
     
     if($('.ver-mid').length) {
         $('.ver-mid').wrap('<div class="dtable" />').wrap('<div class="dtable-cell" />');
@@ -149,9 +181,13 @@ removed: function(){}
 	$('iframe[src*="youtube.com"], iframe[src*="mapsengine"], object, embed').wrap('<div class="video_wrap" />');
 	function set_onscroll() {
 		if ($(window).scrollTop() > 50) {
-			$('#header').addClass('fixed');
+      if(!$('#header').hasClass('fixed')) {
+			 $('#header').addClass('fixed');        
+      }
 		} else {
-			$('#header').removeClass('fixed');
+      if($('#header').hasClass('fixed')) {
+			 $('#header').removeClass('fixed');  
+      }
 		}
 	}
 	set_onscroll();

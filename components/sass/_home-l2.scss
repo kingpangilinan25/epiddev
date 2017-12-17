@@ -2,11 +2,525 @@
 Home L2
 ******************************************/
 
+.center .dtable {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero-area-l2 {
+  @include rem-px(padding, 2, 0);  
+  color: $white;
+  position: relative;
+  @include gradient-blue;
+  @include rem-px(margin, 0, 0, 5); 
+  
+  @include media('screen','>=laptop') { 
+    background: url(../images/home-l2/hero-gradient.png) no-repeat scroll center center;
+    background-size: 100% 100%;
+  } 
+  
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    left: 0;
+    bottom:0;
+    margin-bottom: -70px;
+    background-image: url(../images/home-l2/hero-gradient.png);
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 0 0 100% 100%;
+    @include gradient-blue;
+    @include media('screen','>=laptop') { 
+      content: none;
+      display: none;
+    }
+  }
+  
+  // 2colhero
+  .form-blue-cont {
+    @include media('screen','>=laptop') { 
+      width: 400px;
+      @include rem-px(width, 30);  
+      float: right;
+      @include rem-px(margin-left, 3);
+    }
+    @include media('screen','>=laptopl') { 
+      @include rem-px(width, 30);  
+      @include rem-px(margin-left, 4);
+    }
+  }
+  
+  .context {     
+    text-align: center;
+    @include media('screen','>=laptop') { 
+      ///text-align: left;
+      overflow: hidden;
+    }
+    @include media('screen','>=tab','<laptop') { 
+      max-width: 100%;
+      width: 600px;
+      margin: 0 auto;
+    }
+    
+    p {
+      @include rem-px(font-size, 1.4);     
+      @include rem-px(margin, 0,0,3);       
+      @include media('screen', '>=laptopl', '<s4k') {
+        @include rem-px(font-size, 1.6); 
+        max-width: 90%;
+        line-height: 1.1;   
+      } 
+    }
+    .title-hero-l2 {
+      text-transform: uppercase;
+      font-weight: bolder;
+      display: block;
+      @include rem-px(margin, 1, 0);  
+      @include rem-px(font-size, 1.8);    
+      
+      @include media('screen', '>=laptop') {
+        @include rem-px(font-size, 3.2);    
+        //text-align: left;
+        line-height: 1.3;
+        font-weight: 900;
+        font-family: $headFontRal;
+      }
+      @include media('screen', '>=laptopl', '<s4k') {
+        @include rem-px(font-size, 4.2); 
+        line-height: 1.1;   
+      }
+    }
+  }
+  
+  .cbtn-m-hero-l2 {
+    display: block;
+    width: 40px;
+    height: 55px;
+    background: url(../images/home-l2/btn-more1-white.png) no-repeat scroll center center;
+    text-align: left;
+    text-indent: -99999px;
+    outline: none;
+    margin: 0 auto;
+    @include media('screen','>=mobl','<laptop') { 
+      margin: 0 auto;
+    }
+    @include media('screen','>=laptop') { 
+      margin: 0 auto;
+    }
+    &:hover {
+      color: #212121;
+    }
+  }
+}
+
+.form-blue-cont {
+  color: $white;
+  @include rem-px(border-radius, 1);
+  background: darken(#0060bd, 12%);
+  @include rem-px(margin, 0, 0, 2);  
+  @include rem-px(padding, 0, 0, 1);  
+  
+  @include media('screen','>=tab') { 
+    background: #0060bd;
+  }  
+  @include media('screen','>=mobl','<laptop') { 
+    max-width: 100%;
+    width: 400px;
+    margin: 0 auto;
+  }
+  @include media('screen','>=laptop') { 
+    @include rem-px(padding, 0, 0,3);  
+  }
+  div.wpcf7-validation-errors {
+    display: block !important;
+    line-height: 1.6;
+    font-style: italic;
+    color: yellow;
+    @include rem-px(font-size, 1.4);  
+  }
+  .wpcf7-not-valid {
+    background: #e7711b !important;
+  }
+  
+  .cfield-group {
+    position: relative;
+    padding-right: 40px;
+    @include rem-px(padding-right, 4);  
+    &::after {
+      content: "icon";
+      font-family: FontAwesome;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 40px;
+    }
+    &.field-name::after {
+      content: "\f2c0";
+      
+    }
+    &.field-email::after {
+      content: "\f003";
+      
+    }
+    &.field-website::after {
+      content: "\f0c1";  
+    }
+  }
+  
+  .title-fb-form {
+    font-family: $headFont;
+    font-weight: normal;
+    text-transform: uppercase;
+    @include rem-px(font-size, 1.8);
+    color: $white;
+    display: block;
+    margin: 0;
+    line-height: 1.5;
+    @include rem-px(padding, 0.8, 3, 1.5);  
+    @include rem-px(border-radius, 1, 1, 0, 0);  
+    background: darken(#0054a5, 10%);
+    text-align: center;
+  
+    @include media('>=tab') { 
+      background: #0054a5;
+    }
+    
+  }
+  .cfield-group {
+    border: 1px solid #ddeaf6;
+    @include rem-px(border-radius, 0.5);  
+    @include rem-px(margin, 0, 0, 1);  
+  }
+  input[type=email],
+  input[type=text] {
+    background: none;
+    width: 100%;
+    display: block;
+    border: none;
+    @include rem-px(padding, 0.3, 1);  
+
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $white;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $white;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $white;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $white;
+    }    
+    &:hover {
+      background: rgba(255,255,255,0.1)
+    }
+  }  
+  
+  .field-sbmt {
+    @include media('screen','>=laptop') {  
+      position: relative;
+      @include rem-px(margin, 0, -3);
+      text-transform:  uppercase;
+      &::before {
+        content: "\f1d9";
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        margin: 0;
+        display: block;
+        position: absolute;
+        font: normal normal normal 14px/1 FontAwesome;    
+        line-height: 1;
+        @include rem-px(font-size, 2);
+        @include rem-px(padding, 1, 2);
+        background: lighten($site_green, 5%);
+      }
+    }
+  }
+  
+  button[type=submit],
+  input[type=submit] {
+    background: #98c230;
+    color: #fff;
+    border: none;    
+    position: relative;
+    @include rem-px(font-size, 1.5);
+    @include rem-px(padding, 0.8, 1.5);
+    font-family: $headFont;
+    text-transform:  uppercase;
+    @include rem-px(font-size, 1.8);
+    
+    @include media('screen','>=laptop') {       
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  .form-scode-wrap {
+    @include rem-px(padding, 1, 2, 0.1);
+  }
+  
+}
+
+
+/******************************************
+Hero section
+******************************************/
+
+
+/******************************************
+End Herosection
+******************************************/
+
+/******************************************
+Header Lead section
+******************************************/
+.home-lead-cont {
+  @include rem-px(padding, 2, 0);  
+  h1 {
+    font-weight: bold;
+    text-transform: none;
+    font-family: $headFontRal;
+    @include rem-px(font-size, 1.9);  
+    line-height: 1.5;
+    text-align: center;
+    color: #212121;
+    span {
+      color: $site_blue;
+    }
+    
+    @include media('screen', '>=tab') {
+      @include rem-px(padding, 2, 0, 1);  
+    }
+    @include media('screen', '>=laptop') {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+.featured-serv-cont {
+  
+  &.row {
+    @include media('screen', '<sm') {  // reduce gap
+      padding: 0 5px;
+      [class^=col] {
+        padding: 0 5px;
+      }
+    }
+    @include media('screen', '>=sm') {  // inc gap
+      padding: 0 25px;
+      [class^=col] {
+        padding: 0 25px;
+      }
+    }   
+  } // @include media('screen', '<mobilel') {
+  
+  .featured-item {
+    position: relative;
+    @include rem-px(padding, 0, 0.5, 0.5);
+    @include rem-px(margin, 0, 0, 1, 0);
+    @include rem-px(font-size,1.4);
+    line-height: 1.4;
+    text-align: center;
+        @include media('screen', '>=tab') {
+      font-family: $headFont;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: left;
+      @include rem-px(padding, 3, 1, 3, 5);
+      padding-left: 60px;
+      box-shadow: 0 0 3px 3px rgba(0,0,0,0.08);
+      margin-bottom: 45px;
+      
+      .cbtn-lm {
+        font-family: $headFont;
+        display: block;
+        background: $site_blue;
+        color: #fff;
+        font-weight: normal;
+        @include rem-px(font-size, 1);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include rem-px(margin, 0, 1.6, -0.7, 0);
+        @include rem-px(padding, 0.3, 2.2);
+      }
+    }
+    
+    @include media('screen', '>=lg', '<laptopl') {
+      @include rem-px(font-size, 1.1);
+    }
+    
+    
+    .cicon::before {
+      content: " ";
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin:  0 auto;
+      background: url(../images/home-l2/icon-website-start-f1.png) no-repeat scroll center center #fff;
+      
+      @include media('screen', '>=tab') {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        border-radius: 5px;
+      }
+    }
+    &.fi1 .cicon::before {
+      background-image: url(../images/home-l2/icon-website-start-f1.png);
+    }
+    &.fi2 .cicon::before {
+      background-image: url(../images/home-l2/icon-seo-f1.png);
+    }
+    &.fi3 .cicon::before {
+      background-image: url(../images/home-l2/icon-inc-f1.png);
+    }
+    &.fi4 .cicon::before {
+      background-image: url(../images/home-l2/icon-award-f1.png);
+    }
+    
+
+  } // featured-item
+  
+} //featured-serv-cont
+
+/******************************************
+End Header Lead section
+******************************************/
+
+
+/******************************************
+Review section
+******************************************/
+
+.reviews-cont {
+  background: $light_gray;
+  color: #212121;    
+  @include rem-px(padding, 3, 0, 4);
+  
+  h2 {
+  @include rem-px(margin-bottom, 1);
+    @include headerbgtext;
+    color: $site_blue;
+    text-align: center;
+    @include rem-px(padding, 2, 0.5);
+    
+    .title-text {
+      @include hbgtfront;
+      @include media('screen', '>=tab') {
+        @include rem-px(font-size, 2);
+      }
+    }
+    .title-back {
+      @include hbgtback;
+    }
+  }  
+  
+}
+
+.review-wrap-item {
+  background: #f9f9f9;
+  text-align: center;
+  @include rem-px(padding, 2, 0);
+  @include rem-px(margin, 2, 0);  
+  
+  .dtable { //center    
+    @include media('screen', '>=laptop') {
+      width: 100%;
+    }
+  }
+  
+  figure img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  figure figcaption {
+    text-align: center;
+    @include rem-px(font-size, 1.4);  
+    @include rem-px(padding, 1, 1.5);
+      @include media('screen', '>=laptop', '<laptopl') {
+        @include rem-px(font-size, 1.1);        
+      }
+      @include media('screen', '>=laptopl', '<s4k') {
+        @include rem-px(font-size, 1.4);        
+      }
+  }
+  
+  blockquote {    
+    border: none;  
+    @include rem-px(padding, 0, 1.5);
+    p {      
+      @include media('screen', '>=laptop', '<laptopl') {
+        @include rem-px(font-size, 1.1);        
+      }
+      @include media('screen', '>=laptopl', '<s4k') {
+        @include rem-px(font-size, 1.4);        
+      }
+    }
+  }
+  cite {
+    color: #282828;
+    font-weight: bold;
+    text-transform:  uppercase;
+    @include rem-px(font-size, 1.5);  
+    font-style: normal;
+    position: relative;
+    display: inline-block;
+    
+    &::before {
+      content: "\f10d";
+      position: absolute;
+      right: 115%;
+      font-family: FontAwesome;
+      top: 0;
+      @include rem-px(font-size, 3);  
+      line-height: 1;
+      @include media('screen', '>=tab', '<laptop') {
+        opacity: 0.2; 
+      }
+    }
+  }
+  .start-cont {
+    display: block;
+    text-align: center;
+    color: #e7711b;
+    @include rem-px(font-size, 1.4);  
+    
+    @include media('screen', '>=tab') {
+      @include rem-px(font-size, 1);  
+    }
+  }
+  .crev-sep {
+    display: block;
+    width: 60px;
+    height: 9px;
+    background: url(../images/home-l2/review-sep.png) no-repeat scroll center center;
+    margin:  0 auto;
+  }
+  
+}
+
+
+/******************************************
+End Review section
+******************************************/
+
 
 /******************************************
 SEO section
 ******************************************/
 .sec-seo {
+  @include rem-px(padding, 2, 0)
   .row {
     @include media('screen', '>=tab') {
       @include flexcenter;
@@ -23,11 +537,11 @@ SEO section
       background: url(../images/home-l2/list-checked.png) no-repeat scroll left center;
       @include rem-px(padding-left, 3);
       @include rem-px(font-size, 1.4);
-      font-size: 1.4rem;
-      @include media('screen', '>=tab', '<laptop') {
-        @include rem-px(font-size, 1);
-        line-height: 1.5;
+      @include rem-px(margin-bottom, 1);
+      line-height: 1.5;
+      @include media('screen', '>=tab') {
         @include rem-px(margin-bottom, 1.4);
+        @include rem-px(font-size, 1.2);
       }
     }
     
@@ -39,36 +553,15 @@ SEO section
 
   .context2 h2 {
     color: $site_blue;
-    @include headerbgtext;
+    @include headerbgtext;    
     
     .title-text {
-      z-index: 2;
-      position: relative;
-      display: block;
-      text-shadow: -2px 0 0px 1px #fff;
-      @include rem-px(padding, 0, 0.3);
-      @include media('screen', '>=tab') {
-        @include rem-px(font-size, 2);
-      }
+      @include hbgtfront;
     }
     .title-back {
-      z-index: 1;
-      position: absolute;
-      left: 0;
-      top: -14%;
-      line-height: 1;
-      white-space: nowrap;
-      text-transform:  uppercase;
-      @include centerer;
-      color: rgba(33,33,33,0.05);
-      @include rem-px(font-size, 6);
-      
-      @include media('screen', '>=tab') {
-        //top: -2rem;
-        //left: -4rem;
-        @include rem-px(font-size, 8);
-      }
+      @include hbgtback;
     }
+    
   }
   
 } 
@@ -76,11 +569,20 @@ SEO section
   background: #0098ac;
   color: $white;
   text-align: center;
-  @include rem-px('padding-top', 3);
+  @include rem-px('padding-top', 1);
   float: left;
   width: 46%;
   margin: 2%;
   line-height: 1;
+  position: relative;
+  
+  
+  @include media('screen', '<laptop') {
+    bottom: 0 !important;
+  }
+  @include media('screen', '>=laptop') {
+    @include rem-px('padding-top', 2);    
+  }
   
   border-radius: 10px;
   overflow: hidden;
@@ -88,7 +590,6 @@ SEO section
   display: flex;
   align-self: flex-end;
   flex-direction: column;
-  
   
   figcaption,
   img {
@@ -119,75 +620,6 @@ SEO section
 
 /******************************************
 SEO section
-******************************************/
-
-/******************************************
-WEbdesign great website
-******************************************/
-.sec-great-website {
-  background: $light_gray;
-  @include rem-px(padding, 1, 0, 1, 0);
-  overflow: hidden;
-  @include media('screen', '>=md') {
-    @include rem-px(padding, 4, 0);
-  }
-  
-  .row {
-    @include flexcenter;
-  }
-  
-  img {
-    max-width: 70%;
-    margin: 0 auto;
-    display: block;
-    @include media('screen', '>=laptopl') {
-      max-width: 70%;
-    }
-  }
-  
-  .context2 p {
-    @include rem-px(font-size, 1.8);
-    font-family: $headFont; 
-    @include rem-px(margin-bottom, 1);
-  }
-  .context2 h2 {
-    color: $site_blue;
-    @include headerbgtext;
-    
-    .title-text {
-      z-index: 2;
-      position: relative;
-      display: block;
-      text-shadow: -2px 0 0px 1px #fff;
-      @include rem-px(padding, 0, 0.3);
-      @include media('screen', '>=tab') {
-        @include rem-px(font-size, 2);
-      }
-    }
-    .title-back {
-      z-index: 1;
-      position: absolute;
-      left: 0;
-      top: -14%;
-      line-height: 1;
-      white-space: nowrap;
-      text-transform:  uppercase;
-      @include centerer;
-      color: rgba(33,33,33,0.05);
-      @include rem-px(font-size, 6);
-      
-      @include media('screen', '>=tab') {
-        //top: -2rem;
-        //left: -4rem;
-        @include rem-px(font-size, 8);
-      }
-    }
-  }
-  
-}
-
-/******************************************
-End WEbdesign great website
 ******************************************/
 
 /******************************************
@@ -253,33 +685,23 @@ Conversion Rate Optimization
     color: $white;
     @include rem-px(font-size, 2);
     
+    
+    
     .title-text {
-      z-index: 2;
-      position: relative;
-      display: block;
-      @include media('screen', '>=tab') {
-        @include rem-px(font-size, 2);
-      }
+      @include hbgtfront;
+      @include rem-px(padding, 0);      
     }
     .title-back {
-      z-index: 1;
-      position: absolute;
-      line-height: 1;
-      white-space: nowrap;
-      text-transform:  uppercase;
-      color: rgba(255,255,255,0.08);
-      @include rem-px(font-size, 4);
+      @include hbgtback;
       @include centerer;
+      color: rgba(255,255,255,0.08);
       
       @include media('screen', '>=tab') {     
         top: auto;
-        bottom: 60%;
+        bottom: 55%;
         left: 0;
         transform: translate(0, 0);
-          
-        //top: -2rem;
-        //left: -4rem;
-        @include rem-px(font-size, 2.5);
+        @include rem-px(font-size, 3.8);
       }
     }    
   }
@@ -288,11 +710,67 @@ Conversion Rate Optimization
 End Conversion Rate Optimization
 ******************************************/
 
+
+/******************************************
+WEbdesign great website
+******************************************/
+.sec-great-website {
+  background: $light_gray;
+  @include rem-px(padding, 3, 0, 1, 0);
+  overflow: hidden;
+  @include media('screen', '>=md') {
+    @include rem-px(padding, 4, 0);
+  }
+  
+  .row {
+    @inlclud media('screen', '>=tab') {
+      @include flexcenter;      
+    }
+  }
+  
+  img {
+    max-width:50%;
+    margin: 0 auto;
+    display: block;
+    @include media('screen', '>=laptopl') {
+      max-width: 70%;
+    }
+  }
+  
+  .context2 p {
+    @include rem-px(font-size, 1.8);
+    font-family: $headFont; 
+    @include rem-px(margin-bottom, 1);
+  }
+  .context2 h2 {
+    color: $site_blue;
+    @include headerbgtext;
+    
+    
+    .title-text {
+      @include hbgtfront;
+    }
+    .title-back {
+      @include hbgtback;
+    }
+  }
+  
+}
+
+/******************************************
+End WEbdesign great website
+******************************************/
+
 /******************************************
 CTA Bottom
 ******************************************/
 .cta-ldt-cont {
   @include rem-px(padding, 3, 0, 0);
+  .row {
+    @include media('screen', '>=tab') {
+      @include flexcenter;
+    }
+  }
   h2 {    
     @include rem-px(margin, 0, 0, 1);
     @include rem-px(font-size, 1.8);
@@ -305,6 +783,7 @@ CTA Bottom
     }
     @include media('screen', '>=laptopl') {
       @include rem-px(font-size, 2);    
+      font-weight: 900;
     }
   }
   
@@ -317,7 +796,7 @@ CTA Bottom
   display: block;
   text-align: center;  
   
-  @include media('screen', '>=tab') {
+  @include media('screen', '>=mobl') {
     display: inline-block;
     line-height: 1;
     @include rem-px(padding, 1, 1.6);
