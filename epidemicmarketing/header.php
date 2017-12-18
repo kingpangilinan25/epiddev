@@ -29,9 +29,6 @@
 	<script>
     "'article aside footer header nav section time'".replace(/\w+/g,function(n){document.createElement(n)})
   	</script>
-  	<?php if(is_page(39)): //load only for the blog news page ?>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
-	  <?php endif; ?>
     
     <?php // <!--Start of Zendesk Chat Script--> ?>
     <script type="text/javascript">

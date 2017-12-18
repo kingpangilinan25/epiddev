@@ -52,7 +52,7 @@ add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
 			//wp_register_script('wow', ( get_stylesheet_directory_uri(). "/js/wow.min.js" ),'', '', true);
 			//wp_enqueue_script('wow');  
             
-			wp_register_script('customgnik', ( get_stylesheet_directory_uri(). "/js/customgnik.js" ),'', '', true);
+			wp_register_script('customgnik', ( get_stylesheet_directory_uri(). "/js/customgnik.js" ), array('jquery-masonry'), null, true);
 			wp_enqueue_script('customgnik');   
 		}
 		add_action( 'wp_enqueue_scripts', 'wpgnik_register_js', 10 );

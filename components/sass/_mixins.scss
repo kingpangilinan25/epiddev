@@ -116,7 +116,7 @@
       white-space: nowrap;
       text-transform:  uppercase;
       @include centerer;
-      color: rgba(33,33,33,0.05);
+      color: rgba(33,33,33,0.075);
       @include rem-px(font-size, 6);
       
       @include media('screen', '>=tab') {

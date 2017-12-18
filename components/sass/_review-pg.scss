@@ -1,0 +1,28 @@
+/******************************************
+Review Page 
+******************************************/
+._D7k {
+  @include rem-px(font-size, 1.4);
+  @include rem-px(margin, 2, 1.5);
+  display: block;
+}
+._ucl,
+.review-full-text {
+  @include rem-px(font-size, 1.1);
+  font-size: 14px  !important;
+  font-size: 1.4rem  !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.5px;
+  display: block !important;
+  @include media('screen', '>=tab') {
+    font-size: 1.4rem !important;
+  }
+}
+._G7k {
+  font-weight: bold;
+}
+
+
+/******************************************
+End Review Page 
+******************************************/

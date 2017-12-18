@@ -1,0 +1,386 @@
+/******************************************
+Sub Page 
+******************************************/
+
+/* Hero Sub Page */
+.hl-site-blue {
+  color: lighten($site_blue, 20%);
+}
+
+.hero-area-l2sp {
+  
+  
+  @include rem-px(padding, 2, 0, 1);  
+  position: relative;
+  @include rem-px(font-size, 1.4);
+  
+  .title-fntback {
+    @include rem-px(margin-bottom, 1);
+    @include headerbgtext;
+    color: $site_blue;
+    text-align: center;
+    @include rem-px(padding, 2, 0.5);
+    
+    .title-text {
+      @include hbgtfront;
+      @include media('screen', '>=tab') {
+        @include rem-px(font-size, 2);
+      }
+    }
+    .title-back {
+      @include hbgtback;
+    }
+  }
+  
+  
+  // 2colhero
+  .form-blue-cont {
+    @include media('screen','>=laptop') { 
+      width: 400px;
+      @include rem-px(width, 30);  
+      float: right;
+      @include rem-px(margin-left, 3);
+    }
+    @include media('screen','>=laptopl') { 
+      @include rem-px(width, 30);  
+      @include rem-px(margin-left, 4);
+    }
+  }
+  
+  .context {     
+    @include media('screen','>=laptop') { 
+      ///text-align: left;
+      overflow: hidden;
+    }
+    @include media('screen','>=tab','<laptop') { 
+      max-width: 100%;
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* End Hero Sub Page */
+
+
+/* Sec sec-gray */
+
+
+.sec-gray {  
+  @include rem-px(padding, 2, 0, 4);
+  background: $light_gray;
+  @include rem-px(font-size, 1.4);
+  
+  @include media('screen', '>=tab') {
+    @include rem-px(font-size, 1.2);
+    text-align: center;  
+  }
+  
+  h2 {
+    font-family: $headFont;
+    color: $site_blue;
+    text-transform:  uppercase;
+    font-weight: bold;
+    @include rem-px(font-size, 2.4);
+    @include media('screen', '>=tab') {
+      text-align: center;
+      @include rem-px(margin-bottom, 2);
+    }
+  }
+}
+
+/* End Sec sec-gray */
+
+/* Sec process story */
+
+.sec-process-story {  
+  @include rem-px(padding, 1, 0);
+  @include rem-px(font-size, 1.4);
+  
+  @include media('screen', '>=tab') {
+    @include rem-px(font-size, 1.2);
+  }
+  
+  h2 {
+    font-family: $headFont;
+    color: $site_blue;
+    text-transform:  uppercase;
+    font-weight: bold;
+    @include rem-px(font-size, 2.4);
+    @include media('screen', '>=tab') {
+      text-align: center;
+      @include rem-px(margin-bottom, 2);
+    }
+  }
+  
+  .step-item {
+    position: relative;
+    margin: 0;
+    @include rem-px(padding, 1, 0);
+    clear: both;
+    
+    &::before {
+      @include media('screen', '>=mobm') {
+        position: absolute;
+        content: " ";
+        width: 15px;
+        height: 15px;
+        margin-left: -4px;
+        background: lighten($site_blue, 20%);
+        border-radius: 100%;
+        left: -3px;
+        top: 3px;
+        @include rem-px(top, 1);
+        z-index: 2;
+        
+        @include media('screen', '>=laptop') {  
+          @include rem-px(top, 2);
+        }
+      }
+    }
+    &::after {
+      @include media('screen', '>=mobm') {
+        position: absolute;
+        content: " ";
+        width: 6px;
+        height: 100%;
+        left: -3px;
+        top:0;
+        background: #f5f5f5;
+        display: block;
+        z-index: 1;
+      }
+    }
+    
+    @include media('screen', '>=mobm') {
+      @include rem-px(padding-left, 1.5);
+    }
+    
+    // start 2 colm
+    @include media('screen', '>=tab') {
+      width: 50%;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h3 {
+      font-weight: bold;
+      margin: 0;
+      @include rem-px(font-size, 1.4);  
+      line-height: 1;
+      font-family: $headFont;
+      
+      @include media('screen', '>=tab') {        
+        @include rem-px(font-size, 2);  
+      }
+      &::after {
+        content: " ";
+        display: block;
+        width: 77px;
+        height: 77px;
+        position: relative;
+        background: url(../images/home-l2/icon-idea.png) no-repeat scroll center center transparent;
+        margin: 10px;
+        float: left;
+        
+        @include media('screen', '>=mobm', '<tab') {
+          float: right;
+          margin: -35px 0 0 15px;
+        }
+        
+        @include media('screen', '>=tab') {
+          float: none;
+          display: inline-block;
+          @include rem-px(margin, 0, 1.5);
+          vertical-align: middle;
+        }
+        @include media('screen', '>=tab', '<laptop') {
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin-top: -80px;
+        }
+      } //after
+    } // h3
+    
+  } // step item
+  
+  .step-1 {
+    
+    @include media('screen', '>=tab') {
+      float: right;
+      @include rem-px(padding-left, 1.5);
+    }
+    
+    h3::after {
+      background-image: url(../images/home-l2/icon-idea.png);
+    }
+  } // step-1
+  .step-2 {
+    @include media('screen', '>=tab') {
+      @include rem-px(margin-top, -5);
+      text-align: right;
+    }
+    
+    &:before {
+      @include media('screen', '>=tab') {
+        position: absolute;
+        content: " ";
+        width: 15px;
+        height: 15px;
+        margin-right: -5px;
+        background: lighten($site_blue, 20%);
+        border-radius: 100%;
+        right: -3px;
+        left: auto;
+        top: 3px;
+        @include rem-px(top, 1);
+      }
+    }
+    
+    @include media('screen', '>=tab') {
+      float: left;
+      @include rem-px(padding-right, 1.5);
+    }
+    &::after {
+      @include media('screen', '>=tab') {
+        position: absolute;
+        content: " ";
+        width: 6px;
+        height: 100%;
+        left: auto;
+        right: -3px;
+        top:0;
+        background: #f5f5f5;
+        display: block;
+        z-index: 1;
+      }
+    }
+    
+    h3::after {
+      background-image: url(../images/home-l2/icon-questionare.png);   
+      @include media('screen', '>=laptop') {
+        display: none;
+      }
+    }    
+    h3::before {
+      background: url(../images/home-l2/icon-questionare.png) no-repeat scroll center center transparent;
+      @include media('screen', '>=laptop') {
+        content: " ";
+        display: block;
+        width: 77px;
+        height: 77px;
+        position: relative;
+        margin: 10px;
+        float: none;
+        display: inline-block;
+        @include rem-px(margin, 0, 1.5);
+        vertical-align: middle;
+      }
+    }    
+  } // step-2
+  .step-3 {
+    
+    @include media('screen', '>=tab') {
+      @include rem-px(margin-top, -10);
+      float: right;
+      @include rem-px(padding-left, 1.5);
+    }
+    h3::after {
+      background-image: url(../images/home-l2/icon-design-start.png);      
+    }    
+  } // step-3
+  
+}
+
+/* end Sec process story */
+
+/* Sec Blue */
+
+.sec-blue{
+  background: $site_blue;
+  color: $white;
+  overflow-x: hidden;
+  position: relative;
+  
+  @include media('screen', '<laptop') {
+    padding: 30px 0;
+    border-top: 6px solid #00aac0;    
+    border-bottom: 6px solid #00aac0;
+    
+    .context2 {
+      display: none;
+    } 
+    
+  }
+  @include media('screen', '>=laptop') {
+    .context1 {
+      float: left;
+      width: 55%;
+    }
+    .context2 {
+      float: right;
+      width: 45%;
+    }
+    
+    // center context vert
+    .container {
+      @include flexcenter;
+    }
+    
+    
+    // .sec-conversion-rate
+    &::before {
+      content: " ";
+      display: block;
+      position: relative;
+      @include rem-px(height, 22.1);
+      height: calc(221px - 5vw);
+      width: 100%;
+      background: url(../images/home-l2/sec-diagonal-blue-top.png) no-repeat scroll center bottom;
+      background-size: 100% 100%;
+    }
+    &::after {
+      content: " ";
+      display: block;
+      position: relative;
+      @include rem-px(height, 18.1);
+      height: calc(221px - 5vw);
+      width: 100%;
+      background: url(../images/home-l2/sec-diagonal-blue-bot.png) no-repeat scroll center bottom;
+      background-size: 100% 100%;
+    }  
+  }
+  
+  h2 {
+    @include headerbgtext;
+    color: $white;
+    @include rem-px(font-size, 2);
+    
+    
+    
+    .title-text {
+      @include hbgtfront;
+      @include rem-px(padding, 0);      
+    }
+    .title-back {
+      @include hbgtback;
+      @include centerer;
+      color: rgba(255,255,255,0.08);
+      
+      @include media('screen', '>=tab') {     
+        top: auto;
+        bottom: 55%;
+        left: 0;
+        transform: translate(0, 0);
+        @include rem-px(font-size, 3.8);
+      }
+    }    
+  }
+}
+/* End Sec Blue */
+
+/******************************************
+End Sub Page 
+******************************************/

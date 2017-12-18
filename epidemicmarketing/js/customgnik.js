@@ -59,6 +59,23 @@ jQuery(document).ready(function(e) {
 			$(l).wrapInner('<div class="dtable-cell" />').wrapInner('<div class="dtable" />');
 		});
 	}
+  
+
+	$(window).load(function() {
+		if($('.masonry-wrap').length >= 1) {
+			var $container = $('.masonry-wrap').masonry({
+			  // options
+			  itemSelector: '.masonry-item-wrap',
+				percentPosition: true
+			});
+			//reload masonry when finish lazy loading
+			$container.find("img").on( 'load', function( event ) {
+				$container.masonry('reload');
+			});
+		} else {
+			console.log("masonry not working bec. its missing");
+		}
+	});
     
     if($('.ver-mid').length) {
         $('.ver-mid').wrap('<div class="dtable" />').wrap('<div class="dtable-cell" />');

@@ -11,12 +11,13 @@
 
         <section class="main_cc_text col-md-12" role="main">
           
-            <div class="grid js-masonry" data-masonry-options='{ "itemSelector": ".grid-item", "columWidth": 296 }'>
+            <div class="masonry-wrap"> 
+              <?php // class="grid js-masonry" data-masonry-options='{ "itemSelector": ".grid-item", "columWidth": 296 }'> ?>
 
             <?php query_posts( 'posts_per_page=-1' ); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>			
 
-                <article class="post post-blog grid-item" id="post-<?php the_ID(); ?>">
+                <article class="post post-blog grid-item masonry-item-wrap" id="post-<?php the_ID(); ?>">
                     <div class="well">
                         <?php //include (TEMPLATEPATH . '/inc/meta.php' ); ?>
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

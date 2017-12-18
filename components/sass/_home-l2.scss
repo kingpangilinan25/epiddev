@@ -149,7 +149,7 @@ Home L2
   .cfield-group {
     position: relative;
     padding-right: 40px;
-    @include rem-px(padding-right, 4);  
+    @include rem-px(padding-right, 4);
     &::after {
       content: "icon";
       font-family: FontAwesome;
@@ -158,6 +158,8 @@ Home L2
       top: 0;
       height: 100%;
       width: 40px;
+      @include rem-px(width, 4);
+      text-align: center;
     }
     &.field-name::after {
       content: "\f2c0";
@@ -169,6 +171,13 @@ Home L2
     }
     &.field-website::after {
       content: "\f0c1";  
+    }
+  }
+  .cfield-group.field-message {
+    padding: 0;
+    &::after {
+      display: none;
+      content: "";
     }
   }
   
@@ -196,6 +205,7 @@ Home L2
     @include rem-px(border-radius, 0.5);  
     @include rem-px(margin, 0, 0, 1);  
   }
+  textarea,
   input[type=email],
   input[type=text] {
     background: none;
@@ -252,7 +262,7 @@ Home L2
     border: none;    
     position: relative;
     @include rem-px(font-size, 1.5);
-    @include rem-px(padding, 0.8, 1.5);
+    @include rem-px(padding, 0.5, 1.5);
     font-family: $headFont;
     text-transform:  uppercase;
     @include rem-px(font-size, 1.8);
@@ -351,6 +361,9 @@ Header Lead section
         bottom: 0;
         @include rem-px(margin, 0, 1.6, -0.7, 0);
         @include rem-px(padding, 0.3, 2.2);
+        &:hover {
+          background: darken($site_green, 10%);
+        }
       }
     }
     
@@ -581,7 +594,8 @@ SEO section
     bottom: 0 !important;
   }
   @include media('screen', '>=laptop') {
-    @include rem-px('padding-top', 2);    
+    @include rem-px('padding-top', 2); 
+    @include rem-px('margin-bottom', 1.5); 
   }
   
   border-radius: 10px;
@@ -775,6 +789,7 @@ CTA Bottom
     @include rem-px(margin, 0, 0, 1);
     @include rem-px(font-size, 1.8);
     font-weight: 600;
+    font-weight: 900;
     font-family: $headFontRal;
     text-transform: uppercase;
     line-height: 1.4;
